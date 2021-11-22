@@ -6,104 +6,94 @@ class RonikPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                height: 130,
-                width: 100,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(width: 50, color: Colors.purple)),
-              ),
-              const SizedBox(
-                height: 20,
-                width: 20,
-              ),
-              Container(
-                height: 100,
-                width: 75,
-                child: Text(
-                  'Overall Daily Progress  ',
-                  maxLines: 2,
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-            width: 10,
-          ),
-          Row(
-            children: [
-              Container(
-                color: Colors.blue,
-                child: Text(
-                  '9850 steps',
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic, color: Colors.white),
-                ),
-                height: 170,
-                width: 150,
-              ),
-              const SizedBox(
-                height: 40,
-                width: 40,
-              ),
-              Container(
-                child: Text(
-                  '2430 calories burned',
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.white,
-                  ),
-                ),
-                color: Colors.red,
-                height: 170,
-                width: 150,
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-            width: 10,
-          ),
-          Row(
-            children: [
-              Container(
-                child: Text(
-                  '70 bpm Avg.Heart Rate',
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic, color: Colors.white),
-                ),
-                color: Colors.green,
-                height: 170,
-                width: 150,
-              ),
-              const SizedBox(
-                height: 40,
-                width: 40,
-              ),
-              Container(
-                child: Text(
-                  '15 kms Distance',
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic, color: Colors.white),
-                ),
-                color: Colors.yellow,
-                height: 170,
-                width: 150,
-              ),
-            ],
-          ),
-        ],
-      ),
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('Appbar'),
+        title: Text('Ninja ID card'),
+        centerTitle: true,
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/drizzy.jpg'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 80.0,
+              color: Colors.grey[800],
+            ),
+            Text(
+              'Name',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              'Ronik Karki',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Text(
+              'Current Ninja Level',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              '8',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'ironikxd@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                    fontStyle: FontStyle.italic,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
